@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet RAMenuView *menuView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
-@property (assign, nonatomic) int clickFlag;
+@property (assign, nonatomic, readwrite) BOOL menuOpen;
 
 @end
 
@@ -25,7 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.menuOpen = NO;
+    self.view.translatesAutoresizingMaskIntoConstraints = YES;
+    [self hideMenuView];
 }
 
 #pragma mark -
@@ -33,15 +35,14 @@
 #pragma mark -
 
 -(IBAction)onBarButtonTap:(id)sender {
-    
-    self.clickFlag++;
+    self.menuOpen = !self.menuOpen;
     [self performSelector:@selector(displayMenu:) withObject:sender afterDelay:0.0];
 }
 
 
 -(void) displayMenu:(id) sender {
     
-    if ((self.clickFlag % 2) == 0) {
+    if (!self.menuOpen) {
         
         [UIView animateWithDuration:0.2
                          animations:^{self.menuView.alpha = 0.0;}
@@ -80,4 +81,41 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+#pragma mark - Autolayout Constraints
+- (void) hideMenuView {
+    [self.view removeConstraints:self.view.constraints];
+    
+    //NSDictionary *metrics = @{@"width": @160.0, @"horizontalSpacing":@15.0, @"verticalSpacing":@10};
+    NSMutableArray *constraints = [[NSMutableArray alloc] init];
+    
+    [constraints addObject:
+     [NSLayoutConstraint constraintWithItem:self.menuView
+                                  attribute:NSLayoutAttributeTop
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self.view
+                                  attribute:NSLayoutAttributeBottom
+                                 multiplier:1
+                                   constant:0]];
+
+    [self.view addConstraints:constraints];
+    
+}
+
+- (void) showMenuView {
+    [self.view removeConstraints:self.view.constraints];
+    
+    NSMutableArray *constraints = [[NSMutableArray alloc] init];
+    
+    [constraints addObject:
+     [NSLayoutConstraint constraintWithItem:self.menuView
+                                  attribute:NSLayoutAttributeBottom
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self.view
+                                  attribute:NSLayoutAttributeBottom
+                                 multiplier:1
+                                   constant:0]];
+    
+    [self.view addConstraints:constraints];
+    
+}
 @end
