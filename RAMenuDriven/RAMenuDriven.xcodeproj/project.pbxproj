@@ -13,6 +13,13 @@
 		BD8272F91A60F6FC006BB574 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8272F81A60F6FC006BB574 /* Images.xcassets */; };
 		BD8272FC1A60F6FC006BB574 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8272FA1A60F6FC006BB574 /* LaunchScreen.xib */; };
 		BD8273081A60F6FC006BB574 /* RAMenuDrivenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8273071A60F6FC006BB574 /* RAMenuDrivenTests.m */; };
+		BD8273141A60F770006BB574 /* RARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8273121A60F770006BB574 /* RARootViewController.m */; };
+		BD8273151A60F770006BB574 /* RARootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8273131A60F770006BB574 /* RARootViewController.xib */; };
+		BD8273191A60F830006BB574 /* RAMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8273181A60F830006BB574 /* RAMenuView.m */; };
+		BD82731B1A60F849006BB574 /* RAMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD82731A1A60F849006BB574 /* RAMenuView.xib */; };
+		BD82731D1A61005A006BB574 /* RARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8273121A60F770006BB574 /* RARootViewController.m */; };
+		BD82731F1A610AA4006BB574 /* s.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD82731E1A610AA4006BB574 /* s.gif */; };
+		BD8273211A610AC7006BB574 /* Animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD8273201A610AC7006BB574 /* Animation.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,14 @@
 		BD8273011A60F6FC006BB574 /* RAMenuDrivenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RAMenuDrivenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8273061A60F6FC006BB574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD8273071A60F6FC006BB574 /* RAMenuDrivenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAMenuDrivenTests.m; sourceTree = "<group>"; };
+		BD8273111A60F770006BB574 /* RARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RARootViewController.h; sourceTree = "<group>"; };
+		BD8273121A60F770006BB574 /* RARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RARootViewController.m; sourceTree = "<group>"; };
+		BD8273131A60F770006BB574 /* RARootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RARootViewController.xib; sourceTree = "<group>"; };
+		BD8273171A60F830006BB574 /* RAMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMenuView.h; sourceTree = "<group>"; };
+		BD8273181A60F830006BB574 /* RAMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAMenuView.m; sourceTree = "<group>"; };
+		BD82731A1A60F849006BB574 /* RAMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RAMenuView.xib; sourceTree = "<group>"; };
+		BD82731E1A610AA4006BB574 /* s.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = s.gif; sourceTree = "<group>"; };
+		BD8273201A610AC7006BB574 /* Animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Animation.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +93,10 @@
 		BD8272EA1A60F6FC006BB574 /* RAMenuDriven */ = {
 			isa = PBXGroup;
 			children = (
-				BD8272EF1A60F6FC006BB574 /* AppDelegate.h */,
-				BD8272F01A60F6FC006BB574 /* AppDelegate.m */,
-				BD8272F51A60F6FC006BB574 /* Main.storyboard */,
-				BD8272F81A60F6FC006BB574 /* Images.xcassets */,
-				BD8272FA1A60F6FC006BB574 /* LaunchScreen.xib */,
+				BD82731C1A60FA71006BB574 /* Menu View */,
+				BD8273161A60F77A006BB574 /* Delegate */,
+				BD8273111A60F770006BB574 /* RARootViewController.h */,
+				BD8273121A60F770006BB574 /* RARootViewController.m */,
 				BD8272EB1A60F6FC006BB574 /* Supporting Files */,
 			);
 			path = RAMenuDriven;
@@ -91,6 +105,13 @@
 		BD8272EB1A60F6FC006BB574 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BD8273201A610AC7006BB574 /* Animation.gif */,
+				BD82731A1A60F849006BB574 /* RAMenuView.xib */,
+				BD8273131A60F770006BB574 /* RARootViewController.xib */,
+				BD8272F51A60F6FC006BB574 /* Main.storyboard */,
+				BD8272F81A60F6FC006BB574 /* Images.xcassets */,
+				BD8272FA1A60F6FC006BB574 /* LaunchScreen.xib */,
+				BD82731E1A610AA4006BB574 /* s.gif */,
 				BD8272EC1A60F6FC006BB574 /* Info.plist */,
 				BD8272ED1A60F6FC006BB574 /* main.m */,
 			);
@@ -112,6 +133,24 @@
 				BD8273061A60F6FC006BB574 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD8273161A60F77A006BB574 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BD8272EF1A60F6FC006BB574 /* AppDelegate.h */,
+				BD8272F01A60F6FC006BB574 /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		BD82731C1A60FA71006BB574 /* Menu View */ = {
+			isa = PBXGroup;
+			children = (
+				BD8273171A60F830006BB574 /* RAMenuView.h */,
+				BD8273181A60F830006BB574 /* RAMenuView.m */,
+			);
+			name = "Menu View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,9 +233,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8273211A610AC7006BB574 /* Animation.gif in Resources */,
+				BD82731F1A610AA4006BB574 /* s.gif in Resources */,
 				BD8272F71A60F6FC006BB574 /* Main.storyboard in Resources */,
 				BD8272FC1A60F6FC006BB574 /* LaunchScreen.xib in Resources */,
+				BD82731B1A60F849006BB574 /* RAMenuView.xib in Resources */,
 				BD8272F91A60F6FC006BB574 /* Images.xcassets in Resources */,
+				BD8273151A60F770006BB574 /* RARootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +259,8 @@
 			files = (
 				BD8272F11A60F6FC006BB574 /* AppDelegate.m in Sources */,
 				BD8272EE1A60F6FC006BB574 /* main.m in Sources */,
+				BD8273191A60F830006BB574 /* RAMenuView.m in Sources */,
+				BD8273141A60F770006BB574 /* RARootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8273081A60F6FC006BB574 /* RAMenuDrivenTests.m in Sources */,
+				BD82731D1A61005A006BB574 /* RARootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
